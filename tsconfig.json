@@ -1,23 +1,44 @@
 {
   "compilerOptions": {
-    "target": "es2022",
-    "module": "node16",
-    "lib": ["ES2022"],
-    "moduleResolution": "node16",
-    "rootDir": ".",
-    "outDir": "build",
+    "target": "ESNext",
+    "module": "commonjs",
+    "declaration": true,
+    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
+    "jsx": "preserve",
+    "allowJs": true,
     "importHelpers": true,
     "alwaysStrict": true,
     "sourceMap": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitAny": false,
-    "noImplicitThis": false,
-    "strictNullChecks": false
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "types": [
+      "node",
+      "jest"
+    ],
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@massalabs/massa-web3/*": [
+        "packages/massa-web3/src/*"
+      ],
+      "@massalabs/web3-utils/*": [
+        "packages/web3-utils/src/*"
+      ]
+    },
+    "outDir": "./build",
   },
-  "include": ["src/**/*", "__tests__/**/*"]
+  "include": [
+    "src/**/*",
+    "__tests__/**/*",
+    "test/publicAPI.spec.ts",
+    "packages/**/src/**/*.ts",
+    "src/generated"
+  ]
 }

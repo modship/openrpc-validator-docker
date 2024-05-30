@@ -1,0 +1,11 @@
+{
+    "openrpcDocument": "open_rpc/api_openrpc.json",
+    "outDir": "tmp/",
+    "components": [
+        {
+            "type": "client",
+            "name": "api-client",
+            "language": "typescript"
+        }
+    ]
+}
